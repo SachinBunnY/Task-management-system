@@ -82,7 +82,7 @@ const Project = () => {
   return (
     <div className="project-management">
       <header className="header">
-        <h1>Project Management</h1>
+        <h1 className="title">Project Management</h1>
         <button
           className="btn btn-primary"
           onClick={() => {

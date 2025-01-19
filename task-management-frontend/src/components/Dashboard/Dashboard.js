@@ -19,7 +19,7 @@ const Dashboard = () => {
         const projectResponse = await getAllProjects();
         setProjects(projectResponse);
         if (projectResponse.length > 0) {
-          setSelectedProjectId(projectResponse._id);
+          setSelectedProjectId(projectResponse[0]._id);
         }
       } catch (err) {
         console.log("Error fetching projects", err);

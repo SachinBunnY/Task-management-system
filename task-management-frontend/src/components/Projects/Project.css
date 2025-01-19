@@ -10,6 +10,12 @@
     align-items: center;
     margin-bottom: 20px;
   }
+  .header >.title{
+    width: 70%;
+  }
+  .header> .btn{
+    width: 30%;
+  }
   
   .btn {
     padding: 10px 15px;
