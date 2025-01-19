@@ -1,0 +1,26 @@
+/* Update styles for project and task grouping */
+
+.project-item.active {
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border: 1px solid #0056b3;
+  }
+  
+  .project-item {
+    cursor: pointer;
+  }
+  
+  .task-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .task-item {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+  }
+  
