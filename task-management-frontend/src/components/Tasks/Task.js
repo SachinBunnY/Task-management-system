@@ -26,12 +26,11 @@ const TaskManagement = () => {
   });
   const [editTaskId, setEditTaskId] = useState(null);
 
-  // Fetch tasks for the project
   useEffect(() => {
     const fetchTasks = async () => {
       try {
-        const response = await getAllTask(projectId); // Assume this API call returns grouped tasks
-        setGroupedTasks(response); // Directly update groupedTasks
+        const response = await getAllTask(projectId);
+        setGroupedTasks(response);
       } catch (err) {
         console.error("Error fetching tasks:", err);
       }

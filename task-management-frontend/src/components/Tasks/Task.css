@@ -81,6 +81,10 @@
     justify-content: space-between;
     margin-top: 20px;
   }
+
+  .modal-actions > .btn-save, .btn-cancel{
+    width: 45%;
+  }
   
   .form-group {
     margin-bottom: 15px;

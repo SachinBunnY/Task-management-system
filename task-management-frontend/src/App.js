@@ -12,11 +12,10 @@ import Project from "./components/Projects/Project";
 import TaskManagement from "./components/Tasks/Task";
 import Navbar from "./components/Navbar/Navbar";
 
-// Wrapper component to use `useLocation` inside Router
 const AppContent = () => {
   const location = useLocation();
   const hideNavbar =
-    location.pathname === "/login" || location.pathname === "/register";
+    location.pathname === "/login" || location.pathname === "/";
 
   return (
     <div>
