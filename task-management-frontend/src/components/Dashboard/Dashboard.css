@@ -1,4 +1,7 @@
-/* Update styles for project and task grouping */
+
+.dashboard{
+  padding: 1rem;
+}
 
 .project-item.active {
     background-color: #007bff;
@@ -9,6 +12,12 @@
   
   .project-item {
     cursor: pointer;
+    border-radius: 0.5rem;
+    background: #fff;
+    box-shadow: 2px 2px 1px #ddd;
+    border: 1px solid #ddd;
+    padding: 1rem;
+
   }
   
   .task-list {
@@ -26,5 +35,41 @@
   .summary-cards{
     display: flex;
     justify-content: space-around;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
   }
-  
+  .dashboard-header{
+    display: flex;
+  }
+  .dashboard-content>.projects{
+    display: flex;
+    flex-direction: column;
+  }
+  .project_summary{
+    font-size: large;
+    font-weight: 600;
+  }
+
+.task-summary-text{
+  font-size: medium;
+  font-weight: 500;
+  color: rgb(130, 120, 120);
+  }
+
+.summary-cards> .card{
+  text-align: center;
+}
+
+.card-main-div-dashboard{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  max-height: 20rem;
+  overflow-y: scroll;
+}
+.dashboard-project-div{
+  border: 1px solid #ddd;
+  border-radius: 0.5rem;
+  max-height: 30rem;
+  overflow-y: scroll;
+}

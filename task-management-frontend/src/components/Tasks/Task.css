@@ -33,8 +33,12 @@
   
   .task-groups {
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 0.5rem;
   }
   
   .task-group {
@@ -43,6 +47,7 @@
   }
   
   .task-card {
+    width: 30%;
     border: 1px solid #ddd;
     border-radius: 8px;
     padding: 15px;
@@ -104,3 +109,10 @@
     border-radius: 5px;
   }
   
+  .card-main-div{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    max-height: 30rem;
+    overflow-y: scroll;
+  }

@@ -107,7 +107,7 @@ const TaskManagement = () => {
   return (
     <div className="task-management">
       <header className="header">
-        <h1>Task Management</h1>
+        <h1>Tasks </h1>
         <button
           className="btn btn-primary"
           onClick={() => {
@@ -129,34 +129,36 @@ const TaskManagement = () => {
       <div className="task-groups">
         {Object.keys(groupedTasks).map((status) => (
           <div key={status} className="task-group">
-            <h2>{status}</h2>
-            {groupedTasks[status].map((task) => (
-              <div key={task._id} className="task-card">
-                <h3>{task.title}</h3>
-                <p>{task.description}</p>
-                <p>
-                  <strong>Deadline:</strong>{" "}
-                  {new Date(task.deadline).toLocaleDateString()}
-                </p>
-                <p>
-                  <strong>Assigned To:</strong> {task.assignedTo}
-                </p>
-                <div className="actions">
-                  <button
-                    className="btn btn-edit"
-                    onClick={() => openEditModal(task)}
-                  >
-                    Edit
-                  </button>
-                  <button
-                    className="btn btn-delete"
-                    onClick={() => handleDelete(task._id, task.status)}
-                  >
-                    Delete
-                  </button>
+            <p className="project_summary">{status}</p>
+            <div className="card-main-div">
+              {groupedTasks[status].map((task) => (
+                <div key={task._id} className="task-card">
+                  <h3>{task.title}</h3>
+                  <p>{task.description}</p>
+                  <p>
+                    <strong>Deadline:</strong>{" "}
+                    {new Date(task.deadline).toLocaleDateString()}
+                  </p>
+                  <p>
+                    <strong>Assigned To:</strong> {task.assignedTo}
+                  </p>
+                  <div className="actions">
+                    <button
+                      className="btn btn-edit"
+                      onClick={() => openEditModal(task)}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className="btn btn-delete"
+                      onClick={() => handleDelete(task._id, task.status)}
+                    >
+                      Delete
+                    </button>
+                  </div>
                 </div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         ))}
       </div>
